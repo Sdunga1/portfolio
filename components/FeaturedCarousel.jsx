@@ -26,18 +26,17 @@ const featuredWork = [
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7331589560881111041/",
   },
   {
-    title: "ASU Sun Award",
+    title: "Graduate Services Assistant @ ASU",
     description:
-      "Honored to receive the SUN Award for Exemplary Service for impactful mentorship and collaboration at ASU.",
-    image: "/assets/featuredImages/image1.png",
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7329478132564930560/",
+      "Closely worked with Prof. Ruben Acuña, serving as a grader for DSA and Operating Systems at ASU.",
+    image: "/assets/featuredImages/grader.png",
+    link: "https://search.asu.edu/profile/4979732",
   },
   {
-    title: "LeetCode #500 Days",
+    title: "GistiFi AI Summarizer",
     description:
-      "Received 500 days of problem-solving badge on Leetcode - a journey of consistency, and continuous learning.",
-    video: "/assets/featuredImages/leetcode.mp4",
-    isVideo: true,
+      "Built and published a Chrome extension that analyzes BigOh complexity of code snippets and summarizes web articles using the Gemini API",
+    image: "/assets/featuredImages/GistiFi.png",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7331589560881111041/",
   },
 ];
@@ -53,11 +52,30 @@ const FeaturedCarousel = () => {
 
   return (
     <motion.div
+      id="featured"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="w-full px-[12%] py-10"
+      className="scroll-mt-28 w-full px-[12%] py-10"
     >
+      <motion.h4
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+        className="text-center mb-2 text-lg font-Ovo"
+      >
+        Highlights
+      </motion.h4>
+
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="text-center text-5xl font-Ovo"
+      >
+        Featured Work
+      </motion.h2>
+
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -65,7 +83,7 @@ const FeaturedCarousel = () => {
         pagination={{ clickable: true }}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         spaceBetween={30}
@@ -90,11 +108,11 @@ const FeaturedCarousel = () => {
               transition={{ duration: 0.2, ease: "easeOut" }}
               className="block border border-gray-400 rounded-lg p-6 hover:shadow-lg hover:bg-lightHover dark:hover:bg-darkHover duration-300 dark:border-white/20"
             >
-              <div className="w-full h-40 overflow-hidden rounded-md mb-4">
+              <div className="relative w-full aspect-video overflow-hidden rounded-md mb-4 bg-gray-100">
                 {project.isVideo && isClient ? (
                   <video
                     src={project.video}
-                    className="object-cover w-full h-full rounded-md pointer-events-none"
+                    className="w-full h-full object-contain rounded-md pointer-events-none"
                     autoPlay
                     muted
                     loop
@@ -104,9 +122,8 @@ const FeaturedCarousel = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={400}
-                    height={160}
-                    className="object-cover w-full h-full rounded-md"
+                    fill
+                    className="object-contain rounded-md"
                   />
                 ) : (
                   <div className="bg-gray-200 w-full h-full rounded-md" />
