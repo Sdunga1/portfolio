@@ -55,10 +55,11 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo">
-            I am an experienced Frontend Developer with over a decade of
-            professional expertise in the field. Throughout my career, I have
-            had the privilege of collaborating with prestigious organizations,
-            contributing to their success and growth.
+            I'm a Master's student in Software Engineering at Arizona State
+            University, driven by a passion for building impactful solutions
+            through clean code and thoughtful design. I love brainstorming and
+            solving complex problems. Currently, I’m seeking opportunities where
+            I can combine my problem-solving mindset creating real-world impact.
           </p>
 
           <motion.ul

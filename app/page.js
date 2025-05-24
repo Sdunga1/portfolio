@@ -8,7 +8,6 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Work from "../components/Work";
 import FeaturedCarousel from "../components/FeaturedCarousel";
-import Education from "../components/Education";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);

@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Typewriter } from "react-simple-typewriter";
 
-const Header = () => {
+const Header = ({ isDarkMode }) => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
@@ -66,10 +66,10 @@ const Header = () => {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          href="#contact"
+          href="#featured"
           className="group relative px-10 py-3 rounded-full border border-white bg-black text-white dark:bg-transparent dark:border-white flex items-center gap-2 overflow-hidden shadow-md transform-gpu transition duration-300 ease-out hover:scale-105 hover:shadow-2xl"
         >
-          <span className="relative z-10">contact me</span>
+          <span className="relative z-10">featured work</span>
           <Image src={assets.right_arrow_white} alt="" className="w-4 z-10" />
           <span className="absolute inset-0 bg-white/10 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </motion.a>
@@ -79,7 +79,7 @@ const Header = () => {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          href="/sample-resume.pdf"
+          href="/SarathKumarDungaResume.pdf"
           download
           className="group relative px-10 py-3 rounded-full border border-gray-500 bg-white text-black dark:text-black flex items-center gap-2 overflow-hidden shadow-md transform-gpu transition duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:bg-gray-100 hover:border-black dark:hover:bg-gray-200"
         >
@@ -88,6 +88,59 @@ const Header = () => {
           <span className="absolute inset-0 bg-black/5 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </motion.a>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        className="inline-flex rounded-md shadow-sm mt-6"
+        role="group"
+      >
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/in/sarath-kumar-dunga-0684a4360/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          <Image
+            src={assets.linkedin}
+            alt="LinkedIn"
+            className="w-4 h-4 mr-2"
+          />
+          LinkedIn
+        </a>
+
+        {/* GitHub */}
+        <a
+          href="https://github.com/Sdunga1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          <Image
+            src={isDarkMode ? assets.github : assets.github_light}
+            alt="GitHub"
+            className="w-4 h-4 mr-2"
+          />
+          GitHub
+        </a>
+
+        {/* LeetCode */}
+        <a
+          href="https://leetcode.com/u/sarath09/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+        >
+          <Image
+            src={assets.leetcode}
+            alt="LeetCode"
+            className="w-4 h-4 mr-2"
+          />
+          LeetCode
+        </a>
+      </motion.div>
     </div>
   );
 };
