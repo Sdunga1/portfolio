@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Services from "../components/Services";
+import Expertise from "../components/Expertise";
 import Work from "../components/Work";
 import FeaturedCarousel from "../components/FeaturedCarousel";
 
@@ -40,7 +40,7 @@ export default function Home() {
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
       <FeaturedCarousel isDarkMode={isDarkMode} />
-      <Services isDarkMode={isDarkMode} />
+      <Expertise isDarkMode={isDarkMode} />
       <Work isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />

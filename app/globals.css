@@ -10,6 +10,14 @@ body {
   @apply bg-white text-black;
 }
 
+html,
+body {
+  height: auto;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
 .dark body {
   background: linear-gradient(to bottom right, #050505, #1f0139);
   color: white;
