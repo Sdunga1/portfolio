@@ -9,11 +9,20 @@ import vscode from "./vscode.png";
 import firebase from "./firebase.png";
 import postman from "./postman.png";
 import git from "./git.png";
+import aws from "./aws.png";
 import github from "./github_dark.png";
 import github_light from "./github_light.png";
 import mongodb from "./mongodb.png";
 import leetcode from "./leetcode.png";
 import linkedin from "./linkedin.png";
+import cpp from "./cpp.png";
+import python from "./python.png";
+import sql from "./sql.png";
+import java from "./java.png";
+import nextjs from "./nextjs.png";
+import reactjs from "./react.png";
+import vuejs from "./vuejs.png";
+import springboot from "./springboot.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
@@ -25,6 +34,9 @@ import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
 import moon_icon from "./moon_icon.png";
 import sun_icon from "./sun_icon.png";
+import cp from "./cp-icon.png";
+import systemdesign from "./systemdesign-icon.png";
+import database from "./database-icon.png";
 import arrow_icon from "./arrow-icon.png";
 import arrow_icon_dark from "./arrow-icon-dark.png";
 import menu_black from "./menu-black.png";
@@ -53,6 +65,7 @@ export const assets = {
   postman,
   git,
   github,
+  aws,
   mongodb,
   right_arrow_white,
   logo,
@@ -82,6 +95,17 @@ export const assets = {
   leetcode,
   linkedin,
   github_light,
+  cpp,
+  python,
+  java,
+  sql,
+  nextjs,
+  reactjs,
+  vuejs,
+  springboot,
+  cp,
+  systemdesign,
+  database,
 };
 
 export const workData = [
@@ -110,58 +134,74 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
-    link: "",
-  },
-  {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "Web Design",
     description:
-      "Mobile app development involves creating software for mobile devices...",
+      "I enjoy building clean and responsive web interfaces using modern technologies like HTML, CSS, JavaScript, and React. I'm constantly improving my skills through personal projects and hands-on practice.",
     link: "",
   },
   {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
+    icon: assets.database,
+    title: "Database Modelling",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
+      "I have a solid understanding of relational databases and enjoy designing schemas that are efficient and scalable. I’ve worked with SQL and ER diagrams in academic and project settings.",
     link: "",
   },
   {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    icon: assets.cp,
+    title: "Competitive Programming",
+    description:
+      "Solving algorithmic problems helps me strengthen my problem-solving skills. I regularly practice on platforms like LeetCode and Codeforces to improve my coding speed and logic.",
+    link: "",
+  },
+  {
+    icon: assets.systemdesign,
+    title: "System Design",
+    description:
+      "I'm actively learning how large-scale systems are designed. I study common patterns and architectures to understand trade-offs and build scalable, maintainable software systems.",
     link: "",
   },
 ];
 
 export const infoList = [
-  {
-    icon: assets.code_icon,
-    iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "C++, Python, SQL, JavaScript, React Js, Next Js, Java",
-  },
+  // {
+  //   icon: assets.code_icon,
+  //   iconDark: assets.code_icon_dark,
+  //   title: "Languages",
+  //   description: "C++, Python, SQL, JavaScript, React Js, Next Js, Java",
+  // },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
     description: "Masters in Software Engineering",
   },
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
-  },
+  // {
+  //   icon: assets.project_icon,
+  //   iconDark: assets.project_icon_dark,
+  //   title: "Projects",
+  //   description: "Built more than 5 projects",
+  // },
+];
+
+export const languagesData = [
+  assets.cpp,
+  assets.python,
+  assets.sql,
+  assets.java,
+];
+
+export const frameworkData = [
+  assets.nextjs,
+  assets.reactjs,
+  assets.springboot,
+  assets.vuejs,
 ];
 
 export const toolsData = [
   assets.vscode,
+  assets.aws,
+  assets.postman,
   assets.firebase,
   assets.mongodb,
-  assets.postman,
-  assets.github,
   assets.git,
 ];
