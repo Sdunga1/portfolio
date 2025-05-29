@@ -13,6 +13,22 @@ import Footer from "@/components/Footer";
 
 const educationData = [
   {
+    type: "work",
+    date: "Jan 2025 - Present",
+    title: "Supplemental Instructor - Data Structures and Algorithms",
+    subtitle: "Ira A. Fulton Schools of Engineering at ASU",
+    description: "Peer-led learning sessions",
+    grade: "Students Mentored: 35+",
+  },
+  {
+    type: "work",
+    date: "Aug 2024 - Present",
+    title: "Graduate Services Assistant",
+    subtitle: "Arizona State University",
+    description: "Grading & academic support",
+    grade: "Courses: DSA, Operating Systems, Software Enterprise",
+  },
+  {
     type: "education",
     date: "Jan 2024 - Dec 2025",
     title: "Arizona State University",

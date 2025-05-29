@@ -6,8 +6,9 @@ import {
   toolsData,
 } from "@/assets/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const About = ({ isDarkMode }) => {
   const getAltText = (imgSrc) => {
@@ -15,6 +16,7 @@ const About = ({ isDarkMode }) => {
     const match = src?.match(/\/([^/]+)\.[a-z]+$/);
     return match ? match[1].split(".")[0].replace(/[-_]/g, " ") : "Tech Icon";
   };
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
@@ -76,9 +78,10 @@ const About = ({ isDarkMode }) => {
           </p>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl"
           >
             {/* Left column: Languages, Frameworks, Tools */}
@@ -155,13 +158,15 @@ const About = ({ isDarkMode }) => {
                 </ul>
               </div>
             </div>
-
             {/* Right column: Education card */}
-            <motion.li
-              whileHover={{ scale: 1.05 }}
-              className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+            <Link
+              href="/education"
+              scroll={true}
+              className="block border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
-              <a href="/education">
+              <motion.div whileHover={{ scale: 1.05 }}>
                 <Image
                   src={isDarkMode ? assets.edu_icon_dark : assets.edu_icon}
                   alt="Education"
@@ -176,8 +181,31 @@ const About = ({ isDarkMode }) => {
                       .description
                   }
                 </p>
-              </a>
-            </motion.li>
+
+                <div
+                  className={`mt-8 inline-flex items-center justify-center relative overflow-hidden p-0.5 rounded-full group font-Ovo ${
+                    isDarkMode
+                      ? "bg-gradient-to-br from-purple-600 to-blue-500"
+                      : "bg-gradient-to-br from-black to-gray-800"
+                  }`}
+                >
+                  <span className="flex items-center gap-2 px-4 py-1.5 text-xs font-medium text-gray-900 transition-all bg-white dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-white dark:text-white border border-gray-300 dark:border-transparent">
+                    Know More
+                    <Image
+                      src={
+                        isDarkMode
+                          ? assets.arrow_icon_dark
+                          : isHovered
+                          ? assets.arrow_icon_dark
+                          : assets.arrow_icon
+                      }
+                      alt="arrow"
+                      className="w-3 sm:w-3.5"
+                    />
+                  </span>
+                </div>
+              </motion.div>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>

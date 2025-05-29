@@ -65,9 +65,9 @@ const Header = ({ isDarkMode }) => {
 
       {/* Centered Carousel */}
       <div
-  className="relative h-[200px] w-full max-w-[800px] min-w-[300px] px-2 flex items-center justify-center overflow-hidden 
+        className="relative h-[200px] w-full max-w-[800px] min-w-[300px] px-2 flex items-center justify-center overflow-hidden 
   -mt-16 sm:-mt-10 md:-mt-12"
->
+      >
         {[...Array(3)].map((_, i) => {
           const offset = i - 1;
           const index = getCircularIndex(currentIndex, offset, roles.length);
@@ -105,11 +105,10 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I'm a Master's student in Software Engineering at Arizona State
-        University, USA, actively seeking roles in Software Engineering,
-        Full-Stack Development, Data Engineering, and Cloud Computing, where I
-        can apply my problem-solving skills to positively create real-world
-        impact.
+        Aspiring Software Engineer driven to build impactful, real-world
+        solutions across Full-Stack, Cloud, and Data domains. Actively seeking
+        opportunities where I can apply my problem solving skills to create
+        meaningful change through technology.
       </motion.p>
 
       {/* Buttons */}
