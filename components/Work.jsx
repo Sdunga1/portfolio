@@ -15,9 +15,10 @@ const Work = ({ isDarkMode }) => {
     <motion.div
       id="work"
       className="w-full px-[12%] py-10 scroll-mt-20"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}

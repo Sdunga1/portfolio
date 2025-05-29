@@ -53,9 +53,10 @@ const FeaturedCarousel = () => {
   return (
     <motion.div
       id="featured"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="scroll-mt-28 w-full px-[12%] py-10"
     >
       <motion.h4
@@ -149,9 +150,54 @@ const FeaturedCarousel = () => {
           cursor: not-allowed !important;
           pointer-events: none !important;
         }
+
+        /* Smaller arrows on mobile */
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 44px;
+          height: 44px;
+        }
+
+        @media (max-width: 640px) {
+          .swiper-button-prev,
+          .swiper-button-next {
+            width: 30px;
+            height: 30px;
+          }
+          .swiper-button-prev::after,
+          .swiper-button-next::after {
+            font-size: 18px !important;
+          }
+        }
       `}</style>
     </motion.div>
   );
 };
+
+<style jsx global>{`
+  .swiper-button-disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 44px;
+    height: 44px;
+  }
+
+  @media (max-width: 640px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 30px;
+      height: 30px;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 18px !important;
+    }
+  }
+`}</style>;
 
 export default FeaturedCarousel;

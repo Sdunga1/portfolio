@@ -10,15 +10,25 @@ export const ProjectList = [
     image: "/assets/featuredImages/GistiFi.png",
     skills:
       "Chrome Extension, Manifest V3, JavaScript, Gemini API, TailwindCSS",
-    github: "https://github.com/Sdunga1/GistiFi-AI-Summarizer.git",
+    github:
+      "https://docs.google.com/document/d/1hlFAJ6MGFe5vF2LHmD2-t2-iPTmY-B-55p_X3JpT2wc/edit?tab=t.0",
     deploy:
       "https://www.linkedin.com/feed/update/urn:li:activity:7331589560881111041/",
   },
   {
+    name: "Scrum Board Simulator",
+    image: "/assets/featuredImages/sbs.png",
+    skills:
+      "Agile & Scrum Practices, Simulation Tool Development, Team Leadership",
+    github:
+      "https://docs.google.com/document/d/1hlFAJ6MGFe5vF2LHmD2-t2-iPTmY-B-55p_X3JpT2wc/edit?tab=t.0",
+    deploy:
+      "https://drive.google.com/file/d/1XYuJHIiFreAh6wv3h-1avuugl-zwri6c/view",
+  },
+  {
     name: "Real Chat",
     image: Proj2,
-    skills:
-      "ReactJs, Socket.IO, MongoDB, Express, Javascript(ES6+), HTML5",
+    skills: "ReactJs, Socket.IO, MongoDB, Express, Javascript(ES6+), HTML5",
     github: "https://github.com/Sarathkumardunga/Real-Chat",
     deploy: "https://github.com/Sarathkumardunga/Real-Chat",
   },

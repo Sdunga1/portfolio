@@ -25,7 +25,10 @@ const Footer = ({ isDarkMode }) => {
 
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
         <p>© 2025 Sarath Kumar Dunga. All rights reserved.</p>
-        <div className="inline-flex gap-4 mt-4 sm:mt-0" role="group">
+        <div
+          className="flex flex-wrap justify-center sm:justify-end gap-x-4 gap-y-3 mt-4 sm:mt-0"
+          role="group"
+        >
           <a
             href="https://www.linkedin.com/in/sarath-kumar-dunga-0684a4360/"
             target="_blank"
