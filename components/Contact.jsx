@@ -1,31 +1,31 @@
-import { assets } from "@/assets/assets";
-import Image from "next/image";
-import React, { useState } from "react";
-import { motion } from "motion/react";
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
 
 const Contact = () => {
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState('');
 
-  const onSubmit = async (event) => {
+  const onSubmit = async event => {
     event.preventDefault();
-    setResult("Sending....");
+    setResult('Sending....');
     const formData = new FormData(event.target);
 
     // Enter your web3 forms access key below
-    formData.append("access_key", "8f46feb9-2648-4529-b4a1-165ddd39e9c5");
+    formData.append('access_key', '8f46feb9-2648-4529-b4a1-165ddd39e9c5');
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
       body: formData,
     });
 
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult('Form Submitted Successfully');
       event.target.reset();
     } else {
-      console.log("Error", data);
+      console.log('Error', data);
       setResult(data.message);
     }
   };
@@ -35,14 +35,14 @@ const Contact = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       id="contact"
       className='w-full px-[12%] py-10 scroll-mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        transition={{ delay: 0.15, duration: 0.4 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         Connect with me
@@ -51,7 +51,7 @@ const Contact = () => {
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
+        transition={{ delay: 0.25, duration: 0.4 }}
         className="text-center text-5xl font-Ovo"
       >
         Get in touch
@@ -60,7 +60,7 @@ const Contact = () => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
+        transition={{ delay: 0.35, duration: 0.4 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         I'd love to hear from you! If you have any questions, comments, or
@@ -70,7 +70,7 @@ const Contact = () => {
       <motion.form
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.5 }}
+        transition={{ delay: 0.45, duration: 0.4 }}
         onSubmit={onSubmit}
         className="max-w-2xl mx-auto"
       >
@@ -78,7 +78,7 @@ const Contact = () => {
           <motion.input
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.6 }}
+            transition={{ delay: 0.6, duration: 0.4 }}
             type="text"
             placeholder="Enter your name"
             required
@@ -89,7 +89,7 @@ const Contact = () => {
           <motion.input
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
+            transition={{ delay: 0.6, duration: 0.4 }}
             type="email"
             placeholder="Enter your email"
             required
@@ -100,7 +100,7 @@ const Contact = () => {
         <motion.textarea
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.3, duration: 0.6 }}
+          transition={{ delay: 0.7, duration: 0.4 }}
           rows="6"
           placeholder="Enter your message"
           required
@@ -114,7 +114,7 @@ const Contact = () => {
           type="submit"
           className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
         >
-          Submit now{" "}
+          Submit now{' '}
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </motion.button>
 

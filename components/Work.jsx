@@ -1,14 +1,14 @@
-"use client";
-import { ProjectList } from "@/data/ProjectList";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "motion/react";
-import { assets } from "@/assets/assets";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+'use client';
+import { ProjectList } from '@/data/ProjectList';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'motion/react';
+import { assets } from '@/assets/assets';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Work = ({ isDarkMode }) => {
   return (
@@ -18,12 +18,12 @@ const Work = ({ isDarkMode }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        transition={{ delay: 0.15, duration: 0.4 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         My Work
@@ -32,7 +32,7 @@ const Work = ({ isDarkMode }) => {
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
+        transition={{ delay: 0.25, duration: 0.4 }}
         className="text-center text-5xl font-Ovo"
       >
         Projects
@@ -41,7 +41,7 @@ const Work = ({ isDarkMode }) => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
+        transition={{ delay: 0.35, duration: 0.4 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
         Explore a collection of web, app, and algorithmic projects that reflect
@@ -93,7 +93,7 @@ const Work = ({ isDarkMode }) => {
       <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.5 }}
+        transition={{ delay: 0.45, duration: 0.4 }}
         href="/projects"
         className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
       >

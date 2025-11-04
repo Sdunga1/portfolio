@@ -4,17 +4,17 @@ import {
   languagesData,
   frameworkData,
   toolsData,
-} from "@/assets/assets";
-import Image from "next/image";
-import React, { useState } from "react";
-import { motion } from "motion/react";
-import Link from "next/link";
+} from '@/assets/assets';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
+import Link from 'next/link';
 
 const About = ({ isDarkMode }) => {
-  const getAltText = (imgSrc) => {
-    const src = typeof imgSrc === "string" ? imgSrc : imgSrc?.src;
+  const getAltText = imgSrc => {
+    const src = typeof imgSrc === 'string' ? imgSrc : imgSrc?.src;
     const match = src?.match(/\/([^/]+)\.[a-z]+$/);
-    return match ? match[1].split(".")[0].replace(/[-_]/g, " ") : "Tech Icon";
+    return match ? match[1].split('.')[0].replace(/[-_]/g, ' ') : 'Tech Icon';
   };
   const [isHovered, setIsHovered] = useState(false);
 
@@ -29,7 +29,7 @@ const About = ({ isDarkMode }) => {
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.4, delay: 0.15 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         Introduction
@@ -38,7 +38,7 @@ const About = ({ isDarkMode }) => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.4, delay: 0.25 }}
         className="text-center text-5xl font-Ovo"
       >
         About me
@@ -66,7 +66,7 @@ const About = ({ isDarkMode }) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.4, delay: 0.35 }}
           className="flex-1"
         >
           <p className="mb-10 max-w-3xl font-Ovo">
@@ -81,7 +81,7 @@ const About = ({ isDarkMode }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl"
           >
             {/* Left column: Languages, Frameworks, Tools */}
@@ -177,7 +177,7 @@ const About = ({ isDarkMode }) => {
                 </h3>
                 <p className="text-gray-600 text-sm dark:text-white/80">
                   {
-                    infoList.find((item) => item.title === "Education")
+                    infoList.find(item => item.title === 'Education')
                       .description
                   }
                 </p>
@@ -185,8 +185,8 @@ const About = ({ isDarkMode }) => {
                 <div
                   className={`mt-8 inline-flex items-center justify-center relative overflow-hidden p-0.5 rounded-full group font-Ovo ${
                     isDarkMode
-                      ? "bg-gradient-to-br from-purple-600 to-blue-500"
-                      : "bg-gradient-to-br from-black to-gray-800"
+                      ? 'bg-gradient-to-br from-purple-600 to-blue-500'
+                      : 'bg-gradient-to-br from-black to-gray-800'
                   }`}
                 >
                   <span className="flex items-center gap-2 px-4 py-1.5 text-xs font-medium text-gray-900 transition-all bg-white dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-white dark:text-white border border-gray-300 dark:border-transparent">

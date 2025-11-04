@@ -134,9 +134,9 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web Design",
+    title: "AI Agents & MCP",
     description:
-      "I enjoy building clean and responsive web interfaces using modern technologies like HTML, CSS, JavaScript, and React. I'm constantly improving my skills through personal projects and hands-on practice.",
+      "I build autonomous AI agents and integrate them with Model Context Protocol (MCP) to enable intelligent, context-aware systems. I work with LLMs, Python SDKs, and AI workflows to create agents that can make decisions and take actions independently.",
     link: "",
   },
   {

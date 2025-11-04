@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { assets } from "@/assets/assets";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'motion/react';
 
 const Header = ({ isDarkMode }) => {
   const roles = [
-    "Software Engineer.",
-    "Data Enthusiast.",
-    "Full-Stack Developer.",
+    'Software Engineer.',
+    'Data Enthusiast.',
+    'Full-Stack Developer.',
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,7 +19,7 @@ const Header = ({ isDarkMode }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % roles.length);
     }, 2500);
     return () => clearInterval(interval);
   }, []);
@@ -37,8 +37,8 @@ const Header = ({ isDarkMode }) => {
     };
 
     updateGap();
-    window.addEventListener("resize", updateGap);
-    return () => window.removeEventListener("resize", updateGap);
+    window.addEventListener('resize', updateGap);
+    return () => window.removeEventListener('resize', updateGap);
   }, []);
 
   return (
@@ -47,7 +47,7 @@ const Header = ({ isDarkMode }) => {
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
-        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+        transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
       >
         <Image src={assets.profile_img} alt="" className="rounded-full w-32" />
       </motion.div>
@@ -56,10 +56,10 @@ const Header = ({ isDarkMode }) => {
       <motion.h3
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.4, delay: 0.15 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
       >
-        Hi! I'm Sarath Kumar Dunga{" "}
+        Hi! I'm Sarath Kumar Dunga{' '}
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </motion.h3>
 
@@ -74,12 +74,12 @@ const Header = ({ isDarkMode }) => {
           const role = roles[index];
 
           const offsetY = offset * screenGap;
-          let style = "opacity-0 scale-90 blur-sm z-0";
+          let style = 'opacity-0 scale-90 blur-sm z-0';
           if (offset === 0) {
-            style = "opacity-100 scale-135 blur-0 z-20";
+            style = 'opacity-100 scale-135 blur-0 z-20';
           } else {
             style = `opacity-30 scale-20 blur-sm z-10 ${
-              isDarkMode ? "text-white" : "text-gray-900"
+              isDarkMode ? 'text-white' : 'text-gray-900'
             }`;
           }
           return (
@@ -88,8 +88,8 @@ const Header = ({ isDarkMode }) => {
               className={`absolute whitespace-nowrap transition-all duration-700 ease-in-out text-4xl sm:text-5xl md:text-5xl font-Ovo ${style}`}
               style={{
                 transform: `translate(-50%, ${offsetY}px)`,
-                left: "50%",
-                top: "50%",
+                left: '50%',
+                top: '50%',
               }}
             >
               {role}
@@ -102,7 +102,7 @@ const Header = ({ isDarkMode }) => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
+        transition={{ duration: 0.4, delay: 0.35 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
         Aspiring Software Engineer driven to build impactful, real-world
@@ -116,7 +116,7 @@ const Header = ({ isDarkMode }) => {
         <motion.a
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.4, delay: 0.25 }}
           href="#featured"
           className="group relative px-10 py-3 rounded-full border border-white bg-black text-white dark:bg-transparent dark:border-white flex items-center gap-2 overflow-hidden shadow-md transform-gpu transition duration-300 ease-out hover:scale-105 hover:shadow-2xl"
         >
@@ -128,7 +128,7 @@ const Header = ({ isDarkMode }) => {
         <motion.a
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.4, delay: 0.35 }}
           href="/SarathKumarDungaResume.pdf"
           download
           className="group relative px-10 py-3 rounded-full border border-gray-500 bg-white text-black dark:text-black flex items-center gap-2 overflow-hidden shadow-md transform-gpu transition duration-300 ease-out hover:scale-105 hover:shadow-2xl hover:bg-gray-100 hover:border-black dark:hover:bg-gray-200"
@@ -143,7 +143,7 @@ const Header = ({ isDarkMode }) => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
+        transition={{ duration: 0.4, delay: 0.45 }}
         className="inline-flex rounded-md shadow-sm mt-6"
         role="group"
       >

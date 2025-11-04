@@ -36,7 +36,7 @@ const Certifications = ({ isDarkMode }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
-        Credentials
+        Credentials and Badges
       </motion.h4>
 
       <motion.h2
