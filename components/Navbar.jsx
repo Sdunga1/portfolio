@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { assets } from "@/assets/assets";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false);
@@ -11,11 +11,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const sideMenuRef = useRef();
 
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
+    sideMenuRef.current.style.transform = 'translateX(-16rem)';
   };
 
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
+    sideMenuRef.current.style.transform = 'translateX(16rem)';
   };
 
   useEffect(() => {
@@ -26,16 +26,17 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         setIsScroll(false);
       }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/#top" },
-    { name: "About me", href: "/#about" },
-    { name: "What I Do", href: "/#services" },
-    { name: "Projects", href: "/#work" },
-    { name: "Contact me", href: "/#contact" },
+    { name: 'Home', href: '/#top' },
+    { name: 'About me', href: '/#about' },
+    { name: 'What I Do', href: '/#services' },
+    { name: 'Projects', href: '/#work' },
+    { name: 'Certifications', href: '/#certifications' },
+    { name: 'Contact me', href: '/#contact' },
   ];
 
   return (
@@ -47,8 +48,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
           isScroll
-            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
-            : ""
+            ? 'bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20'
+            : ''
         }`}
       >
         <Link href="/#top">
@@ -62,11 +63,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
             isScroll
-              ? ""
-              : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
+              ? ''
+              : 'bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent'
           }`}
         >
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <li key={link.name}>
               <Link href={link.href} scroll={true}>
                 <span className="font-Ovo relative inline-block text-gray-800 dark:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-gray-800 dark:after:bg-white after:transition-all after:duration-300 hover:after:w-full cursor-pointer">
@@ -78,7 +79,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button onClick={() => setIsDarkMode((prev) => !prev)}>
+          <button onClick={() => setIsDarkMode(prev => !prev)}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               alt="Toggle theme"
@@ -93,8 +94,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             onMouseLeave={() => setIsHovered(false)}
             className={`hidden lg:inline-flex items-center justify-center relative overflow-hidden p-0.5 rounded-full ml-4 group font-Ovo ${
               isDarkMode
-                ? "bg-gradient-to-br from-purple-600 to-blue-500"
-                : "bg-gradient-to-br from-black to-gray-500"
+                ? 'bg-gradient-to-br from-purple-600 to-blue-500'
+                : 'bg-gradient-to-br from-black to-gray-500'
             }`}
           >
             <span className="flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-gray-900 transition-all bg-white dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-white dark:text-white border border-gray-300 dark:border-transparent">
@@ -135,7 +136,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             />
           </div>
 
-          {navLinks.map((link) => (
+          {navLinks.map(link => (
             <li key={link.name}>
               <Link href={link.href} scroll={true} onClick={closeMenu}>
                 <span className="font-Ovo cursor-pointer">{link.name}</span>

@@ -17,7 +17,7 @@ const educationData = [
     subtitle: "Tempe, USA",
     degree: "Master of Science",
     description: "Software Engineering",
-    grade: "CGPA: 3.81/4.00",
+    grade: "CGPA: 3.87/4.00",
   },
   {
     type: "education",
@@ -26,7 +26,7 @@ const educationData = [
     subtitle: "Shibpur, WB",
     degree: "Bachelor's Degree",
     description: "Electronics and Telecommunication Engineering",
-    grade: "CGPA: 8.33/10.0",
+    grade: "CGPA: 8.33/10.00",
   },
   {
     type: "work",

@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import Expertise from "../components/Expertise";
 import Work from "../components/Work";
 import FeaturedCarousel from "../components/FeaturedCarousel";
+import Certifications from "../components/CertificationsCarousel";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -42,6 +43,7 @@ export default function Home() {
       <FeaturedCarousel isDarkMode={isDarkMode} />
       <Expertise isDarkMode={isDarkMode} />
       <Work isDarkMode={isDarkMode} />
+      <Certifications isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
     </>
