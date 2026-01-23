@@ -136,7 +136,7 @@ export const serviceData = [
     icon: assets.web_icon,
     title: "AI Agents & MCP",
     description:
-      "I build autonomous AI agents and integrate them with Model Context Protocol (MCP) to enable intelligent, context-aware systems. I work with LLMs, Python SDKs, and AI workflows to create agents that can make decisions and take actions independently.",
+      "I build and deploy production-grade secured MCP (Model Context Protocol) servers for enterprises, integrating with systems like Siemens Polarion ALM. I work with Level 4 AI agents, LLMs (Gemini 2.0, Anthropic Claude), Python SDKs, and Google Agent Development Kit to create intelligent, context-aware systems that enhance developer productivity and enterprise workflows.",
     link: "",
   },
   {

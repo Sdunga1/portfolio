@@ -70,11 +70,15 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-3xl font-Ovo">
-            I'm a Master's student in Software Engineering at Arizona State
-            University, driven by a passion for building impactful solutions
-            through clean code and thoughtful design. I love brainstorming and
-            solving complex problems. Currently, I’m seeking opportunities where
-            I can combine my problem-solving mindset creating real-world impact.
+            I&apos;m a Full Stack Developer with 3+ years of experience building
+            AI-powered systems and scalable web applications using Python,
+            Node.js, React, and TypeScript. I specialize in MCP (Model Context
+            Protocol) servers, LLMs, and B2B SaaS products. Currently at eBay,
+            I build AI recommendation engines and interactive dashboards. I also
+            develop production-grade MCP servers for enterprises and work with
+            Level 4 AI agents. I&apos;m pursuing my Master&apos;s in Software
+            Engineering at ASU, where I&apos;ve built projects like GistiFi AI
+            Summarizer and HackASU: DevAI Manager.
           </p>
 
           <motion.div

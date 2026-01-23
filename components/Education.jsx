@@ -11,6 +11,22 @@ import WorkIcon from "@mui/icons-material/Work";
 
 const educationData = [
   {
+    type: "work",
+    date: "Feb 2025 - Present",
+    title: "Full Stack Developer, eBay",
+    subtitle: "Remote, USA",
+    description:
+      "Building AI-powered recommendation systems, Python microservices, and React analytics dashboards for a global e-commerce marketplace.",
+  },
+  {
+    type: "work",
+    date: "Sep 2021 - Dec 2023",
+    title: "Full Stack Developer, Reliance Jio",
+    subtitle: "Kolkata, India",
+    description:
+      "Developed telecom web portals, real-time dashboards, and microservices with React, Node.js, and GCP, improving efficiency and reliability.",
+  },
+  {
     type: "education",
     date: "Jan 2024 - Dec 2025",
     title: "Arizona State University",

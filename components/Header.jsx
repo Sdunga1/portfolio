@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 const Header = ({ isDarkMode }) => {
   const roles = [
     'Software Engineer.',
-    'Data Enthusiast.',
+    'AI Agent Developer.',
     'Full-Stack Developer.',
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
